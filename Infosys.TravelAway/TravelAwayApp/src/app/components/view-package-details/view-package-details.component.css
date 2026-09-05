@@ -1,0 +1,112 @@
+
+
+:host {
+  display: block;
+}
+
+/* BACKGROUND */
+.page-wrapper {
+  min-height: 100vh;
+  background-image: url("/assets/Images/view-pakage-details.jpg");
+  background-size: cover;
+  background-position: center;
+  padding: 40px;
+}
+
+/* TITLE */
+.page-title {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #000;
+}
+
+/* MAIN CARD */
+.mmt-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+}
+
+/* EACH ROW */
+.mmt-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 0;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+  .mmt-row:last-child {
+    border-bottom: none;
+  }
+
+/* LEFT COLUMN */
+.mmt-left {
+  width: 40%;
+}
+
+  .mmt-left h4 {
+    margin-bottom: 6px;
+    font-size: 18px;
+  }
+
+  .mmt-left p {
+    color: #555;
+    margin: 0;
+  }
+
+/* MIDDLE COLUMN */
+.mmt-middle {
+  width: 25%;
+  text-align: center;
+}
+
+  .mmt-middle span {
+    color: #777;
+    display: block;
+    margin-bottom: 4px;
+  }
+
+  .mmt-middle p {
+    margin: 4px 0 0;
+  }
+
+/* RIGHT COLUMN (FIXED OVERLAP) */
+.mmt-right {
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 10px;
+}
+
+/* PRICE BOX */
+.price-box {
+  text-align: right;
+}
+
+  .price-box h3 {
+    margin: 4px 0;
+    font-size: 24px;
+  }
+
+  .price-box small {
+    color: #555;
+  }
+
+/* BUTTON */
+.book-btn {
+  background: #1976d2;
+  color: #fff;
+  border: none;
+  padding: 8px 18px;
+  border-radius: 6px;
+  cursor: pointer;
+  min-width: 90px;
+}
+
+  .book-btn:hover {
+    background: #0d47a1;
+  }

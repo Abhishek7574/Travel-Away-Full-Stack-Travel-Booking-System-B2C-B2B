@@ -1,0 +1,121 @@
+<div *ngIf="customerLayout">
+  
+  <app-user-layout></app-user-layout>
+</div>
+<div class="content">
+  <div class="bookpkg">
+    <h2 class="header-title">Book Package</h2>
+
+    <form #bookForm="ngForm" (ngSubmit)="submitBookForm(bookForm)" novalidate>
+
+      <!-- Contact Number -->
+      <div class="form-group">
+        <label for="contact">Contact Number *</label>
+        <input type="text"
+               id="contact"
+               name="contactNumber"
+               class="form-control"
+               placeholder="Enter 10-digit contact number"
+               ngModel
+               #contactRef="ngModel"
+               required
+               pattern="[1-9][0-9]{9}" />
+
+        <div class="error-msg"
+             *ngIf="contactRef.invalid && (contactRef.dirty || contactRef.touched)">
+          <div *ngIf="contactRef.errors?.['required']">
+            Contact number is mandatory
+          </div>
+          <div *ngIf="contactRef.errors?.['pattern']">
+            Contact number must be 10 digits and should not start with 0
+          </div>
+        </div>
+      </div>
+
+      <!-- Address -->
+      <div class="form-group">
+        <label for="ab">Residential Address *</label>
+        <textarea name="address"
+                  class="form-control"
+                  id="ab"
+                  placeholder="Enter residential address"
+                  ngModel
+                  #addressRef="ngModel"
+                  required></textarea>
+
+        <div class="error-msg"
+             *ngIf="addressRef.invalid && (addressRef.dirty || addressRef.touched)">
+          Address is mandatory
+        </div>
+      </div>
+
+      <!-- Date of Travel -->
+      <div class="form-group">
+        <label for="dt">Date of Travel *</label>
+        <input type="date"
+               name="dateOfTravel"
+               class="form-control" id="dt"
+               ngModel
+               #dateRef="ngModel"
+               required />
+
+        <div class="error-msg"
+             *ngIf="dateRef.invalid && (dateRef.dirty || dateRef.touched)">
+          Date of travel is mandatory
+        </div>
+      </div>
+
+      <!-- Adults -->
+      <div class="form-group">
+        <label for="de">Adults *</label>
+        <input type="number"
+               name="adults"
+               class="form-control" id="de"
+               placeholder="Enter number of adults"
+               ngModel
+               #adultRef="ngModel"
+               required
+               min="1" />
+
+        <div class="error-msg"
+             *ngIf="adultRef.invalid && (adultRef.dirty || adultRef.touched)">
+          Minimum 1 adult is required
+        </div>
+      </div>
+
+      <!-- Children -->
+      <div class="form-group">
+        <label for="dw">Children *</label> 
+        <input type="number"
+               name="children"
+               class="form-control" id="dw"
+               placeholder="Enter number of children"
+               ngModel
+               #childRef="ngModel"
+               required
+               min="0" />
+
+        <div class="error-msg"
+             *ngIf="childRef.invalid && (childRef.dirty || childRef.touched)">
+          Number of children cannot be negative
+        </div>
+      </div>
+
+      <!-- Buttons -->
+      <div class="btn-group">
+        <button type="submit"
+                class="btn btn-success"
+                [disabled]="bookForm.invalid">
+          Book Package
+        </button>
+
+        <button type="button"
+                class="btn btn-secondary"
+                (click)="bookForm.resetForm()">
+          Cancel
+        </button>
+      </div>
+
+    </form>
+  </div>
+</div>

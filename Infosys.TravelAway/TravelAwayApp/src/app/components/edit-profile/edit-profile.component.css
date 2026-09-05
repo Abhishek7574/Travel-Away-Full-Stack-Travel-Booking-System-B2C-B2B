@@ -1,0 +1,79 @@
+
+/* PAGE CENTERING */
+.profile-page {
+  min-height: 100vh;
+  background: #f4f6f9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* CARD */
+.profile-card {
+  width: 420px;
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+  /* TITLE */
+  .profile-card h2 {
+    text-align: center;
+    margin-bottom: 5px;
+  }
+
+.subtitle {
+  text-align: center;
+  color: #777;
+  margin-bottom: 20px;
+}
+
+/* FORM */
+.form-group {
+  margin-bottom: 15px;
+}
+
+  .form-group label {
+    font-weight: 600;
+    margin-bottom: 5px;
+    display: block;
+  }
+
+.form-control {
+  width: 100%;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+/* ERROR */
+.error {
+  color: red;
+  font-size: 12px;
+}
+
+/* BUTTON */
+.btn-submit {
+  width: 100%;
+  padding: 10px;
+  background: #1976d2;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+  .btn-submit:disabled {
+    background: #aaa;
+    cursor: not-allowed;
+  }
+
+/* SERVER MESSAGE */
+.server-msg {
+  margin-top: 10px;
+  text-align: center;
+  color: red;
+}

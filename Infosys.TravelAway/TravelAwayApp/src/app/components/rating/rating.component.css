@@ -1,0 +1,106 @@
+/* Page layout */
+.content {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  padding: 40px;
+}
+
+/* Card */
+.ratepkg {
+  background: #ffffff;
+  padding: 35px 40px;
+  width: 100%;
+  max-width: 450px;
+  border-radius: 16px;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.25);
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+/* Title */
+.header-title {
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 26px;
+  font-weight: 700;
+  color: #4a4a4a;
+}
+
+/* Labels */
+.field-label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #555;
+}
+
+/* Inputs */
+.forminputs {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+  transition: all 0.3s ease;
+}
+
+  .forminputs:focus {
+    outline: none;
+    border-color: #764ba2;
+    box-shadow: 0 0 8px rgba(118, 75, 162, 0.6);
+  }
+
+/* Invalid input highlight */
+.ng-invalid.ng-touched.forminputs {
+  border-color: #e53935;
+  box-shadow: 0 0 6px rgba(229, 57, 53, 0.6);
+}
+
+/* Error message */
+.error-msg {
+  margin-top: 6px;
+  font-size: 13px;
+  color: #e53935;
+  font-weight: 500;
+}
+
+/* Submit button */
+.btn-submit {
+  width: 100%;
+  margin-top: 10px;
+  padding: 14px;
+  border-radius: 30px;
+  border: none;
+  background: linear-gradient(135deg, #4f63d6, #5a3d91);
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+  .btn-submit:hover:not(:disabled) {
+    transform: scale(1.05);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+  }
+
+  .btn-submit:disabled {
+    background: #bdbdbd;
+    cursor: not-allowed;
+  }
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

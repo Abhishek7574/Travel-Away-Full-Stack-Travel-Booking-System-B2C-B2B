@@ -1,0 +1,130 @@
+<div *ngIf="customerLayout">
+  <div class="logo">🌍 GoWander</div>
+  <app-user-layout></app-user-layout>
+</div>
+
+<div class="profile-page">
+
+  <div class="profile-card">
+
+    <h2>Edit Profile</h2>
+    <p class="subtitle">All fields are mandatory</p>
+
+    <form #updateForm="ngForm" (ngSubmit)="SubmitForm(updateForm)">
+
+      <!-- First Name -->
+      <div class="form-group">
+        <label for=" name">First Name</label>
+        <input type="text"
+               id=" name"
+               class="form-control"
+               name="firstName"
+               [(ngModel)]="firstName"
+               #firstNameRef="ngModel"
+               required
+               pattern="[a-zA-Z]{1,}" />
+
+        <small class="error" *ngIf="firstNameRef.errors && firstNameRef.touched">
+          Enter a valid First Name
+        </small>
+      </div>
+
+      <!-- Last Name -->
+      <div class="form-group">
+        <label for=" lname">Last Name</label>
+        <input type="text"
+               id=" lname"
+               class="form-control"
+               name="lastName"
+               [(ngModel)]="lastName"
+               #lastNameRef="ngModel"
+               required
+               pattern="[a-zA-Z]{1,}" />
+
+        <small class="error" *ngIf="lastNameRef.errors && lastNameRef.touched">
+          Enter a valid Last Name
+        </small>
+      </div>
+
+      <!-- Gender -->
+      <div class="form-group">
+        <label for="abc">Gender</label>
+        <select class="form-control"
+                name="gender"
+                id="abc"
+                [(ngModel)]="gender"
+                #genderRef="ngModel"
+                required>
+          <option value="" disabled>Select Gender</option>
+          <option value="M">Male</option>
+          <option value="F">Female</option>
+        </select>
+
+        <small class="error" *ngIf="genderRef.errors && genderRef.touched">
+          Gender is mandatory
+        </small>
+      </div>
+
+      <!-- Contact -->
+      <div class="form-group">
+        <label for="contact">Contact Number</label>
+        <input type="text"
+               id="contact"
+               class="form-control"
+               name="contactNumber"
+               [(ngModel)]="contact"
+               #contactRef="ngModel"
+               required
+               pattern="[1-9]{1}[0-9]{9}" />
+
+        <small class="error" *ngIf="contactRef.errors && contactRef.touched">
+          Enter valid 10-digit contact number
+        </small>
+      </div>
+
+      <!-- DOB -->
+      <div class="form-group">
+        <label for="dob">Date of Birth</label>
+        <input type="date"
+               id="dob"
+               class="form-control"
+               name="dob"
+               [(ngModel)]="dob"
+               #dobRef="ngModel"
+               required />
+
+        <small class="error" *ngIf="dobRef.errors && dobRef.touched">
+          Date of Birth is mandatory
+        </small>
+      </div>
+
+      <!-- Address -->
+      <div class="form-group">
+        <label for="add">Address</label>
+        <textarea class="form-control"
+                  rows="3"
+                  id="add"
+                  name="address"
+                  [(ngModel)]="address"
+                  #addressRef="ngModel"
+                  required></textarea>
+
+        <small class="error" *ngIf="addressRef.errors && addressRef.touched">
+          Address is mandatory
+        </small>
+      </div>
+
+      <!-- Submit -->
+      <button type="submit"
+              class="btn-submit"
+              [disabled]="updateForm.invalid">
+        Update Profile
+      </button>
+
+      <!-- Message -->
+      <p class="server-msg" *ngIf="showDiv">{{ msg }}</p>
+
+    </form>
+
+  </div>
+</div>

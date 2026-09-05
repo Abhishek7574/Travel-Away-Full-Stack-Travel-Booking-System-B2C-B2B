@@ -1,0 +1,41 @@
+<div *ngIf="customerLayout">
+
+  <app-user-layout></app-user-layout>
+</div>
+<div *ngIf="errorMessage" class="alert alert-danger">
+  {{ errorMessage }}
+</div>
+
+<table class="table" *ngIf="bookedPackages.length > 0">
+  <thead>
+    <tr>
+      <th>Booking ID</th>
+      <th>Address</th>
+      <th>Travel Date</th>
+      <th>Status</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr *ngFor="let booking of bookedPackages">
+      <td>{{ booking.bookingId }}</td>
+      <td>{{ booking.address }}</td>
+      <td>{{ booking.dateOfTravel | date }}</td>
+      <td>
+        <span class="status-badge">{{ booking.status }}</span>
+      </td>
+      <td>
+        <button class="btn btn-rate"
+                [disabled]="booking.status !== 'Booked'"
+                (click)="ratePackage(booking)">
+          Rate
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<p *ngIf="bookedPackages.length === 0 && !errorMessage" class="warning">
+  No bookings found for this account.
+</p>

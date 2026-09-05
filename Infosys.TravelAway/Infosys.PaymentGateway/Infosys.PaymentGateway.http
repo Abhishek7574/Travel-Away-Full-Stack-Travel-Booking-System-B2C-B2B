@@ -1,0 +1,6 @@
+@Infosys.PaymentGateway_HostAddress = http://localhost:5159
+
+GET {{Infosys.PaymentGateway_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

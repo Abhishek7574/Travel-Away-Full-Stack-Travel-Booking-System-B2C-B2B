@@ -1,0 +1,175 @@
+{
+  "GlobalConfiguration": {
+    "BaseUrl": "https://localhost:7015"
+  },
+  "Routes": [
+    {
+      "DownstreamPathTemplate": "/api/PaymentMicroservices",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7169
+        }
+      ],
+      "UpstreamHttpMethod": [ "POST" ],
+      "UpstreamPathTemplate": "/apiGateway/AddPayment"
+    },
+
+    {
+      "DownstreamPathTemplate": "/api/TravelAway/AddBooking",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7230
+        }
+      ],
+      "UpstreamHttpMethod": [ "POST" ],
+      "UpstreamPathTemplate": "/apiGateway/AddBooking"
+    },
+
+    {
+      "DownstreamPathTemplate": "/api/TravelAway/viewBookedPackage",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7230
+        }
+      ],
+      "UpstreamHttpMethod": [ "GET" ],
+      "UpstreamPathTemplate": "/apiGateway/ViewBookedPackage"
+    },
+
+    {
+      "DownstreamPathTemplate": "/api/TravelAway/ValidateLoginCustomer",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7230
+        }
+      ],
+      "UpstreamHttpMethod": [ "POST" ],
+      "UpstreamPathTemplate": "/apiGateway/ValidateLoginCustomer"
+    },
+
+    {
+      "DownstreamPathTemplate": "/api/TravelAway/AddRating",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7230
+        }
+      ],
+      "UpstreamHttpMethod": [ "POST" ],
+      "UpstreamPathTemplate": "/apiGateway/Addrating"
+    },
+
+    {
+      "DownstreamPathTemplate": "/api/TravelAway/GetPackages",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7230
+        }
+      ],
+      "UpstreamHttpMethod": [ "GET" ],
+      "UpstreamPathTemplate": "/apiGateway/GetPackages"
+    },
+
+    {
+      "DownstreamPathTemplate": "/api/TravelAway/GetCustomerDetails",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7230
+        }
+      ],
+      "UpstreamHttpMethod": [ "GET" ],
+      "UpstreamPathTemplate": "/apiGateway/GetCustomerDetails"
+    },
+
+    {
+      "DownstreamPathTemplate": "/api/TravelAway/GetPackageCategories",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7230
+        }
+      ],
+      "UpstreamHttpMethod": [ "GET" ],
+      "UpstreamPathTemplate": "/apiGateway/GetPackageCategories"
+    },
+
+    {
+      "DownstreamPathTemplate": "/api/TravelAway/GetPackagesByCategoryId",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7230
+        }
+      ],
+      "UpstreamHttpMethod": [ "GET" ],
+      "UpstreamPathTemplate": "/apiGateway/GetPackagesByCategoryId"
+    },
+
+    {
+      "DownstreamPathTemplate": "/api/TravelAway/RegisterCustomer",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7230
+        }
+      ],
+      "UpstreamHttpMethod": [ "POST" ],
+      "UpstreamPathTemplate": "/apiGateway/RegisterCustomer"
+    },
+
+
+    {
+      "DownstreamPathTemplate": "/api/TravelAway/GetPackageDetailsByPackageId",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7230
+        }
+      ],
+      "UpstreamHttpMethod": [ "GET" ],
+      "UpstreamPathTemplate": "/apiGateway/GetPackageDetailsByPackageId"
+    },
+
+    {
+      "DownstreamPathTemplate": "/api/TravelAway/UpdateProfile",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7230
+        }
+      ],
+      "UpstreamHttpMethod": [ "PUT" ],
+      "UpstreamPathTemplate": "/apiGateway/UpdateProfile"
+    },
+    {
+      "DownstreamPathTemplate": "/api/TravelAway/GetCustomerByEmail",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7230
+        }
+      ],
+      "UpstreamHttpMethod": [ "GET" ],
+      "UpstreamPathTemplate": "/apiGateway/GetCustomerByEmail"
+    }
+  ]
+}

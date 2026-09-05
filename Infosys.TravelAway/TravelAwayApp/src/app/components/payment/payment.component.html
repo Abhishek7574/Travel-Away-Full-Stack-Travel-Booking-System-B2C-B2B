@@ -1,0 +1,34 @@
+<div class="payment-container">
+  <div class="payment-card">
+    <h2 class="title">Payment Gateway</h2>
+    <p class="subtitle">Complete the payment to confirm your booking</p>
+
+    <form (ngSubmit)="payNow()" #paymentForm="ngForm">
+
+      <div class="form-group">
+        <label for="la">Booking ID</label>
+        <input type="text"
+               id="la"
+               class="form-control"
+               [value]="bookingId"
+               readonly />
+      </div>
+
+      <div class="form-group">
+        <label for="a">Amount</label>
+        <input type="text"
+               id="a"
+               class="form-control"
+               [value]="'INR ' + amount"
+               readonly />
+      </div>
+
+      <button type="submit"
+              class="pay-btn"
+              [disabled]="isProcessing">
+        {{ isProcessing ? 'Processing...' : 'Pay Now' }}
+      </button>
+
+    </form>
+  </div>
+</div>

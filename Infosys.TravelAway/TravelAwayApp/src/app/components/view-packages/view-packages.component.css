@@ -1,0 +1,101 @@
+
+
+
+/* Page background */
+.content {
+  min-height: 100vh;
+  padding: 40px;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  color: #fff;
+  font-family: 'Quicksand', sans-serif;
+}
+
+/* Heading */
+#pkgheading {
+  font-size: 36px;
+  margin-bottom: 25px;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* Filter */
+.filter-row {
+  max-width: 300px;
+  margin: 0 auto 40px auto;
+}
+
+.filter-label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.filter {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+}
+
+/* Package container */
+.pkg-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+/* Card */
+.pkg-card {
+  background-color: #111;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+  .pkg-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.7);
+  }
+
+/* Image */
+.pkg-img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+/* Info */
+.pkg-info {
+  padding: 20px;
+}
+
+  .pkg-info h3 {
+    margin-bottom: 10px;
+    font-size: 22px;
+  }
+
+  .pkg-info p {
+    font-size: 14px;
+    opacity: 0.85;
+    margin-bottom: 20px;
+  }
+
+/* Button */
+.pkg-btn {
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  background: #00c6ff;
+  background: linear-gradient(to right, #00c6ff, #0072ff);
+  color: #000;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+  .pkg-btn:hover {
+    background: linear-gradient(to right, #0072ff, #00c6ff);
+  }

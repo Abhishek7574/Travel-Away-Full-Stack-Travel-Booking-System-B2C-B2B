@@ -1,0 +1,49 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36908.2
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infosys.TravelAway.ServiceLayer", "Infosys.TravelAway.ServiceLayer\Infosys.TravelAway.ServiceLayer.csproj", "{86CEC674-13C9-4DD2-B406-BC0D366E7F24}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infosys.TravelAway.DAL", "Infosys.TravelAway.DAL\Infosys.TravelAway.DAL.csproj", "{CF4CF554-D293-4F31-BC60-82C695BD4881}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infosys.TravelAway.TestApp", "Infosys.TravelAway.TestApp\Infosys.TravelAway.TestApp.csproj", "{7F09746E-F31A-4828-BB7D-6293AC7634D2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infosys.PaymentMicroservice", "Infosys.PaymentMicroservice\Infosys.PaymentMicroservice.csproj", "{BF767EC4-B18D-441D-A7CD-69A23FC1975F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infosys.PaymentGateway", "Infosys.PaymentGateway\Infosys.PaymentGateway.csproj", "{E52F1151-81FF-4422-9AF9-6E5F263D06BA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{86CEC674-13C9-4DD2-B406-BC0D366E7F24}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{86CEC674-13C9-4DD2-B406-BC0D366E7F24}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{86CEC674-13C9-4DD2-B406-BC0D366E7F24}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{86CEC674-13C9-4DD2-B406-BC0D366E7F24}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CF4CF554-D293-4F31-BC60-82C695BD4881}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF4CF554-D293-4F31-BC60-82C695BD4881}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF4CF554-D293-4F31-BC60-82C695BD4881}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF4CF554-D293-4F31-BC60-82C695BD4881}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7F09746E-F31A-4828-BB7D-6293AC7634D2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7F09746E-F31A-4828-BB7D-6293AC7634D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7F09746E-F31A-4828-BB7D-6293AC7634D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7F09746E-F31A-4828-BB7D-6293AC7634D2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BF767EC4-B18D-441D-A7CD-69A23FC1975F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BF767EC4-B18D-441D-A7CD-69A23FC1975F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BF767EC4-B18D-441D-A7CD-69A23FC1975F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BF767EC4-B18D-441D-A7CD-69A23FC1975F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E52F1151-81FF-4422-9AF9-6E5F263D06BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E52F1151-81FF-4422-9AF9-6E5F263D06BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E52F1151-81FF-4422-9AF9-6E5F263D06BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E52F1151-81FF-4422-9AF9-6E5F263D06BA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C6E31B2D-F692-4D32-A680-3697DF27FE90}
+	EndGlobalSection
+EndGlobal

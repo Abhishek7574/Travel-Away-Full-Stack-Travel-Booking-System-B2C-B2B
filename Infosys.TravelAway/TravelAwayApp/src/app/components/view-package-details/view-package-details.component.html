@@ -1,0 +1,45 @@
+<div class="page-wrapper" *ngIf="customerLayout">
+
+<app-user-layout></app-user-layout>
+
+<!-- PACKAGE TITLE -->
+<h2 class="page-title">{{ packageName }}</h2>
+
+<!-- MAKE MY TRIP STYLE CARD -->
+<div class="mmt-card" *ngIf="packageDetails.length > 0">
+
+  <!-- ROW -->
+  <div class="mmt-row" *ngFor="let pkg of packageDetails">
+
+    <!-- LEFT -->
+    <div class="mmt-left">
+      <h4>{{ pkg.placesToVisit }}</h4>
+      <p>{{ pkg.description }}</p>
+    </div>
+
+    <!-- MIDDLE -->
+    <div class="mmt-middle">
+      <span>Duration</span>
+      <strong>{{ pkg.noOfDays }}D / {{ pkg.noOfNights }}N</strong>
+      <p>{{ pkg.accomodation }}</p>
+    </div>
+
+    <!-- RIGHT -->
+    <div class="mmt-right">
+      <div class="price-box">
+        <span>Starting from</span>
+        <h3>₹{{ pkg.pricePerAdult }}</h3>
+        <small>per adult</small>
+      </div>
+
+      <button class="book-btn"
+              (click)="navigateToBookPackage(pkg)">
+        Book
+      </button>
+    </div>
+
+  </div>
+
+</div>
+
+</div>

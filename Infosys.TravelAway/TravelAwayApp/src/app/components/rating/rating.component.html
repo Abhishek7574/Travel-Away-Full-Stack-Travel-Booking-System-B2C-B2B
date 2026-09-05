@@ -1,0 +1,69 @@
+<div class="content">
+  <div class="ratepkg">
+    <h1 class="header-title">Rate your booked package</h1>
+
+    <form #rateForm="ngForm" (ngSubmit)="submitForm(rateForm)" novalidate>
+
+      <!-- Rating -->
+      <div class="form-group">
+        <label for="dg" class="field-label">Review Rating</label>
+        <input
+          type="number"
+          name="rating"
+               id="dg"
+          class="form-control forminputs"
+          ngModel
+          #ratingRef="ngModel"
+          required
+          min="1"
+          max="5"
+          placeholder="Enter rating (1 - 5)"
+        />
+
+        <div
+          class="error-msg"
+          *ngIf="ratingRef.invalid && (ratingRef.dirty || ratingRef.touched)"
+        >
+          <div *ngIf="ratingRef.errors?.['required']">
+            Rating is mandatory
+          </div>
+          <div *ngIf="ratingRef.errors?.['min'] || ratingRef.errors?.['max']">
+            Rating must be between 1 and 5
+          </div>
+        </div>
+      </div>
+
+      <!-- Comments -->
+      <div class="form-group">
+        <label for="tg"class="field-label">Review Comments</label>
+        <textarea
+          name="comments"
+          class="form-control forminputs"
+                  id="tg"
+          ngModel
+          #commentRef="ngModel"
+          required
+          rows="4"
+          placeholder="Write your experience..."
+        ></textarea>
+
+        <div
+          class="error-msg"
+          *ngIf="commentRef.invalid && (commentRef.dirty || commentRef.touched)"
+        >
+          Review comments are mandatory
+        </div>
+      </div>
+
+      <!-- Submit -->
+      <button
+        type="submit"
+        class="btn-submit"
+        [disabled]="rateForm.invalid"
+      >
+        Rate
+      </button>
+
+    </form>
+  </div>
+</div>
