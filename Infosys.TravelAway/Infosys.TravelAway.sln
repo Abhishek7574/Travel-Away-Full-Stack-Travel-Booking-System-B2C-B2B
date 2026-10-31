@@ -7,8 +7,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infosys.TravelAway.ServiceL
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infosys.TravelAway.DAL", "Infosys.TravelAway.DAL\Infosys.TravelAway.DAL.csproj", "{CF4CF554-D293-4F31-BC60-82C695BD4881}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infosys.TravelAway.TestApp", "Infosys.TravelAway.TestApp\Infosys.TravelAway.TestApp.csproj", "{7F09746E-F31A-4828-BB7D-6293AC7634D2}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infosys.PaymentMicroservice", "Infosys.PaymentMicroservice\Infosys.PaymentMicroservice.csproj", "{BF767EC4-B18D-441D-A7CD-69A23FC1975F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infosys.PaymentGateway", "Infosys.PaymentGateway\Infosys.PaymentGateway.csproj", "{E52F1151-81FF-4422-9AF9-6E5F263D06BA}"
@@ -27,10 +25,6 @@ Global
 		{CF4CF554-D293-4F31-BC60-82C695BD4881}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CF4CF554-D293-4F31-BC60-82C695BD4881}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CF4CF554-D293-4F31-BC60-82C695BD4881}.Release|Any CPU.Build.0 = Release|Any CPU
-		{7F09746E-F31A-4828-BB7D-6293AC7634D2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7F09746E-F31A-4828-BB7D-6293AC7634D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7F09746E-F31A-4828-BB7D-6293AC7634D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7F09746E-F31A-4828-BB7D-6293AC7634D2}.Release|Any CPU.Build.0 = Release|Any CPU
 		{BF767EC4-B18D-441D-A7CD-69A23FC1975F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{BF767EC4-B18D-441D-A7CD-69A23FC1975F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BF767EC4-B18D-441D-A7CD-69A23FC1975F}.Release|Any CPU.ActiveCfg = Release|Any CPU

@@ -27,7 +27,9 @@ Angular client -> API gateway -> Travel service / Payment microservice -> Databa
 │   ├── Infosys.PaymentGateway/            # Ocelot gateway
 │   ├── TravelAwayApp/                     # Angular web client
 │   └── Infosys.TravelAway.sln             # .NET solution
-└── Project Requirement/                   # Project requirement material
+├── docs/
+│   └── requirements/                       # Project requirement material
+└── tests/                                  # Test projects and test documentation
 ```
 
 ## Prerequisites
@@ -78,11 +80,21 @@ npm run build
 npm test
 ```
 
+## Testing and limitations
+
+- The repository includes a `tests/` guidance folder; add dedicated .NET test projects before relying on automated backend coverage.
+- The gateway, payment microservice, service layer, and frontend must use mutually compatible local URLs and configuration values.
+- This project uses development-oriented CORS settings that should be tightened for production.
+
 ## Security notes
 
 - Store credentials in environment variables, .NET User Secrets, or a managed secret store.
 - Keep production connection strings and payment-provider credentials out of Git.
 - Restrict the permissive development CORS settings before any production deployment.
+
+## Architecture
+
+See [architecture documentation](docs/architecture.md) for the request flow, component responsibilities, and deployment considerations.
 
 ## License
 
